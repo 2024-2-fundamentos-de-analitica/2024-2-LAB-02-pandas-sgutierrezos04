@@ -17,7 +17,11 @@ def pregunta_03():
     B     7
     C     5
     D     6
-    E    14
+    E    14 
     Name: count, dtype: int64
 
     """
+    import pandas as pd
+    tbl0 = pd.read_csv('files/input/tbl0.tsv', sep='\t')
+    return tbl0['c1'].value_counts().sort_index()
+
